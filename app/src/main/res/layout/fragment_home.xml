@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.main.home.HomeFragment">
+
+   <androidx.appcompat.widget.AppCompatEditText
+       android:id="@+id/etSearch"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:singleLine="true"
+       android:layout_margin="10dp"
+       android:imeOptions="actionSearch"
+       android:textSize="18sp"
+       android:hint="Search"
+       android:padding="10dp"
+       android:drawablePadding="10dp"
+       android:drawableStart="@drawable/ic_search"
+       android:drawableTint="#868C91"
+       android:inputType="textAutoCorrect"
+       android:background="@drawable/bg_search"/>
+
+    <ScrollView
+        android:background="@drawable/bg_listcontact"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvContact"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </ScrollView>
+
+</LinearLayout>
